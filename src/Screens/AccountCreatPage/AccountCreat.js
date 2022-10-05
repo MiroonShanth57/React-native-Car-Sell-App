@@ -2,13 +2,13 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, Dimensions } from 
 import React from 'react'
 import Svg, { Image } from 'react-native-svg'
 
-
-export default function WelcomePage() {
+export default function AccountCreat() {
 
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
 
     return (
+        
         <View style={style.container}>
             <View style={[StyleSheet.absoluteFill]}>
                 <Svg style={style.svgStyle}>
@@ -19,59 +19,45 @@ export default function WelcomePage() {
                 </Svg>
             </View>
 
-            <View style={style.TxtTitleContainer} width={windowWidth / 1.1}>
 
-                <Text style={style.TxtTitleWelcome}>
-                    MS CAR'S
-                </Text>
-                {/* Welcome Back, */}
-                <Text style={style.TxtTitleBody}>
-                    Best Car Buying & Selling Platform..
-                </Text>
-            </View>
-
-            <View style={style.containerLoginTxtSection} width={windowWidth / 1.1}>
+            <View style={style.containerLoginTxtSection} width={windowWidth / 1.1} height={windowHeight / 1.4}>
                 <Text style={style.TxtTitleLog}>
-                    Login
+                    Sign Up
                 </Text>
 
                 <Text style={style.TxtTitle2Body}>
-                    Please sign in to continue...
+                    Create Your Account Here....
                 </Text>
 
+                <TextInput placeholder='Name' style={style.TxtInput} />
+                <TextInput placeholder='Contact Number' style={style.TxtInput} />
+                <TextInput placeholder='Email' style={style.TxtInput} />
                 <TextInput placeholder='Username' style={style.TxtInput} />
                 <TextInput placeholder='Password' style={style.TxtInput} />
 
+                <View style={style.containerBtnSection}>
 
+                    <TouchableOpacity
+                        style={style.btn}
+                        onPress={this.onPress}
+                    >
+                        <Text style={style.btnTxt}>Sign Up</Text>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                    onPress={this.onPress}>
-                    <Text style={style.TxtTitleForgotPass}>Forgot password ?</Text>
-                </TouchableOpacity>
-            </View>
-
-            <View style={style.containerBtnSection}>
-
-                <TouchableOpacity
-                    style={style.btn}
-                    onPress={this.onPress}
-                >
-                    <Text style={style.btnTxt}>LOG IN</Text>
-                </TouchableOpacity>
+                </View>
 
             </View>
+
             <View style={style.containerEnd}>
                 <Text style={style.TxtTitleDont}>
-                    Don't have an account ?
+                Already have account?
                 </Text>
 
                 <TouchableOpacity
                     onPress={this.onPress}>
-                    <Text style={style.TxtTitleSign}>Sign up</Text>
+                    <Text style={style.TxtTitleSign}>Log in</Text>
                 </TouchableOpacity>
             </View>
-
-
 
         </View>
     )
@@ -90,7 +76,7 @@ const style = StyleSheet.create({
         height: 120,
     },
     containerLoginTxtSection: {
-        top: -200,
+        top: -120,
         left: 18,
         height: 270,
         backgroundColor: 'rgba(52, 52, 52, 0.6)',
@@ -109,7 +95,8 @@ const style = StyleSheet.create({
         marginHorizontal: 30,
         marginVertical: 130,
         borderWidth: 1,
-        borderColor: 'gray'
+        borderColor: 'gray',
+        bottom: -260,
 
     },
     btnTxt: {
@@ -130,7 +117,7 @@ const style = StyleSheet.create({
         marginVertical: 10,
         borderRadius: 10,
         paddingLeft: 10,
-        top: 30
+        top: 55
     },
     btnForm: {
         backgroundColor: '#dfe6e9',
@@ -196,7 +183,7 @@ const style = StyleSheet.create({
         fontWeight: 'bold',
         color: '#fff',
         left: 30,
-        top: 20
+        top: 30
     },
     TxtTitle2Body: {
         fontFamily: 'alignSelf',
@@ -205,7 +192,7 @@ const style = StyleSheet.create({
         color: 'white',
         alignItems: 'center',
         left: 30,
-        top: 20
+        top: 30
     },
     TxtTitleForgotPass: {
         fontFamily: 'alignSelf',
@@ -234,7 +221,7 @@ const style = StyleSheet.create({
         fontWeight: 'bold',
         color: 'silver',
         alignItems: 'center',
-        left: 225,
+        left: 222,
         bottom: 37,
         position: 'relative',
         textDecorationLine: 'underline'
