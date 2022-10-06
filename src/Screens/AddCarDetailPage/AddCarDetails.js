@@ -22,8 +22,12 @@ export default function AddCarDetails() {
         </Text>
       </View>
 
-      {/* <View style={style.bodyContainer}> */}
-      <ScrollView style={style.bodyContainer}>
+    <View style={style.bodyContainer}>
+
+          <Text style={style.InputTit1}>Create Ad</Text>
+          <Text style={style.InputTitDec1}>create advertisement poster here</Text>
+
+      <ScrollView style={style.bodyContainerSc}>
         <View style={style.InputDetailsContainer}>
           <Text style={style.InputTit}>Location</Text>
           <Text style={style.InputTitDec}>where are you selling this item?</Text>
@@ -112,7 +116,7 @@ export default function AddCarDetails() {
 
       </ScrollView>
 
-      {/* </View> */}
+      </View>
     </SafeAreaView>
 
 
@@ -149,10 +153,13 @@ const style = StyleSheet.create({
   },
   bodyContainer: {
     width: '100%',
-    marginTop: '4%',
+    marginTop: '18%',
     backgroundColor: 'rgba(248, 248, 255, 1)',
-    borderTopRightRadius: 100,
-    borderTopLeftRadius: 100
+    borderTopRightRadius: 50,
+    borderTopLeftRadius: 50,
+    marginBottom:'60%',
+    borderBottomLeftRadius:30,
+    borderBottomRightRadius:30
 
 
     //marginHorizontal:,
@@ -160,37 +167,41 @@ const style = StyleSheet.create({
   },
   bodytitleContainer: {
     width: '100%',
-    height: '7%',
+    height: '15%',
     flexDirection: 'row',
-    marginTop: '4%',
+    marginTop: '25%',
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(169, 169, 169, 0.9)',
+    backgroundColor: 'rgba(169, 169, 169, 0.3)',
     borderRadius: 10,
+    position:'absolute',
+    left:8,
+    borderTopRightRadius: 50,
+    borderTopLeftRadius: 50,
 
 
   },
   bodytitle: {
     color: 'black',
-    top: '18%',
+    top: '13%',
     position: 'absolute',
     fontSize: 18,
     fontWeight: '900',
-    left: 19,
+    left: 37,
   },
   bodytitle2: {
     color: 'black',
-    top: '55%',
+    top: '28%',
     position: 'absolute',
     fontSize: 13,
     fontWeight: '500',
-    left: 19,
+    left: 37,
   },
   InputDetailsContainer: {
     width: '95%',
     height: 100,
     marginTop: '20%',
     marginBottom: '1%',
-    backgroundColor: 'rgba(169, 169, 169, 0.2)',
+    backgroundColor: 'rgba(169, 169, 169, 0.1)',
     borderRadius: 20,
     position: 'relative',
     marginHorizontal: 9,
@@ -226,10 +237,33 @@ const style = StyleSheet.create({
     height: 100,
     marginTop: '0%',
     marginBottom: '1%',
-    backgroundColor: 'rgba(169, 169, 169, 0.2)',
+    backgroundColor: 'rgba(169, 169, 169, 0.1)',
     borderRadius: 20,
     position: 'relative',
     marginHorizontal: 9,
+  },
+  bodyContainerSc:{
+    width: '100%',
+    marginTop: '19%',
+    backgroundColor: 'rgba(248, 248, 255, 0.1)',
+    marginBottom:'8%'
+    
+  },
+  InputTit1:{
+    color: 'black',
+    top: '7%',
+    position: 'absolute',
+    fontSize: 16,
+    fontWeight: '500',
+    left: 30,
+  },
+  InputTitDec1:{
+    color: 'black',
+    top: '10%',
+    position: 'absolute',
+    fontSize: 12,
+    fontWeight: '400',
+    left: 30,
   }
 })
 
