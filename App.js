@@ -16,12 +16,12 @@ export default function App() {
      //<LoginPage/>
     //<WelcomePage/>
     //<AccountCreat/>
-    //<DashBoard/>
+    <DashBoard/>
     // <View>
     //   <Text>
     //     Miroon
     //   </Text>
     // </View>
-    <AddCarDetails/>
+    //<AddCarDetails/>
   )
   }
