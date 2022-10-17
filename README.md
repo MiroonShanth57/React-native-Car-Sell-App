@@ -17,6 +17,6 @@ Sell and Buy Used Cars
 
 > ###**AddCarDetails**
 
-![image of Screen](src/Screens/LogInPage/pic/AddCarApp.jpg)
+![image of Screen](src/Screens/LogInPage/pic/AddCarApp.jpg=100x20)
 
 
