@@ -3,7 +3,7 @@ import React from 'react'
 import Svg, { Image } from 'react-native-svg'
 
 
-export default function WelcomePage() {
+export default function WelcomePage({ navigation }) {
 
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
@@ -54,9 +54,9 @@ export default function WelcomePage() {
 
                 <TouchableOpacity
                     style={style.btn}
-                    onPress={this.onPress}
+                    onPress={() => { navigation.navigate("DashBoard") }}
                 >
-                    <Text style={style.btnTxt}>LOG IN</Text>
+                    <Text style={style.btnTxt} >LOG IN</Text>
                 </TouchableOpacity>
 
             </View>
@@ -65,9 +65,8 @@ export default function WelcomePage() {
                     Don't have an account ?
                 </Text>
 
-                <TouchableOpacity
-                    onPress={this.onPress}>
-                    <Text style={style.TxtTitleSign}>Sign up</Text>
+                <TouchableOpacity>
+                    <Text style={style.TxtTitleSign} onPress={() => { navigation.navigate("AccountCreat") }}>Sign up</Text>
                 </TouchableOpacity>
             </View>
 
@@ -241,6 +240,10 @@ const style = StyleSheet.create({
     },
     containerEnd: {
         justifyContent: 'flex-end'
+    },
+    SignTouchable: {
+
+        bottom: 34
     }
 
 

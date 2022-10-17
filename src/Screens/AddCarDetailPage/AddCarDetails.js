@@ -182,8 +182,8 @@ const style = StyleSheet.create({
     position: 'relative',
     borderTopRightRadius: 50,
     borderTopLeftRadius: 50,
-    borderBottomLeftRadius:50,
-    borderBottomRightRadius:50
+    borderBottomLeftRadius: 50,
+    borderBottomRightRadius: 50
   },
   hedingTitle: {
     color: 'black',
@@ -192,7 +192,7 @@ const style = StyleSheet.create({
     fontSize: 20,
     fontWeight: '800',
     left: 19,
-    
+
 
 
   },
@@ -276,7 +276,7 @@ const style = StyleSheet.create({
     borderRadius: 10,
     paddingLeft: 10,
     top: 30,
-    color:'black'
+    color: 'black'
   },
   InputDetailsContainer1: {
     width: '95%',
@@ -311,24 +311,24 @@ const style = StyleSheet.create({
     fontWeight: '400',
     left: 30,
   },
-  btnContainer:{
-    backgroundColor:'#ffff',
-    position:'absolute',
-    left:'25%',
-    width:'50%',
-    top:'90%',
-    height:40,
-    borderRadius:18,
+  btnContainer: {
+    backgroundColor: '#ffff',
+    position: 'absolute',
+    left: '25%',
+    width: '50%',
+    top: '90%',
+    height: 40,
+    borderRadius: 18,
 
 
 
   },
-  TxtTitlePost:{
-    color:'black',
-    left:60,
-    top:11,
-    fontSize:18,
-    fontWeight:'600'
+  TxtTitlePost: {
+    color: 'black',
+    left: 60,
+    top: 11,
+    fontSize: 18,
+    fontWeight: '600'
 
   }
 

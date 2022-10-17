@@ -2,13 +2,13 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, Dimensions } from 
 import React from 'react'
 import Svg, { Image } from 'react-native-svg'
 
-export default function AccountCreat() {
+export default function AccountCreat({ navigation }) {
 
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
 
     return (
-        
+
         <View style={style.container}>
             <View style={[StyleSheet.absoluteFill]}>
                 <Svg style={style.svgStyle}>
@@ -39,7 +39,9 @@ export default function AccountCreat() {
 
                     <TouchableOpacity
                         style={style.btn}
-                        onPress={this.onPress}
+                        onPress={() => {
+                            alert('Your account has been created successfully!');
+                        }}
                     >
                         <Text style={style.btnTxt}>Sign Up</Text>
                     </TouchableOpacity>
@@ -50,12 +52,12 @@ export default function AccountCreat() {
 
             <View style={style.containerEnd}>
                 <Text style={style.TxtTitleDont}>
-                Already have account?
+                    Already have account?
                 </Text>
 
                 <TouchableOpacity
                     onPress={this.onPress}>
-                    <Text style={style.TxtTitleSign}>Log in</Text>
+                    <Text style={style.TxtTitleSign} onPress={() => { navigation.navigate("WelcomePage") }}>Log in</Text>
                 </TouchableOpacity>
             </View>
 

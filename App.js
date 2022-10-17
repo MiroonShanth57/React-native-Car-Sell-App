@@ -6,17 +6,16 @@ import AccountCreat from './src/Screens/AccountCreatPage/AccountCreat'
 import DashBoard from './src/Screens/DashBoardPage/DashBoard'
 import AddCarDetails from './src/Screens/AddCarDetailPage/AddCarDetails'
 import { NavigationContainer } from '@react-navigation/native'
-import { Stack } from 'native-base'
 import { createStackNavigator } from '@react-navigation/stack'
 
 
-
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-     //<LoginPage/>
-    <WelcomePage/>
-   //<AccountCreat/>
+    //<LoginPage/>
+    //<WelcomePage/>
+    //<AccountCreat/>
     //<DashBoard/>
     // <View>
     //   <Text>
@@ -28,15 +27,20 @@ export default function App() {
     // <NavigationContainer>
 
 
-    //     <Stack.Navigator>
-    //   <Stack.Screen name="WelcomePage" component={WelcomePage} />
-    //   <Stack.Screen name="LoginPage" component={LoginPage} />
-    //   <Stack.Screen name="AccountCreat" component={AccountCreat} />
-    //   <Stack.Screen name="DashBoard" component={DashBoard} />
-    //   <Stack.Screen name="AddCarDetails" component={AddCarDetails} />
 
-    // </Stack.Navigator>
     // </NavigationContainer>
 
+
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="WelcomePage" component={WelcomePage} />
+        <Stack.Screen name="LoginPage" component={LoginPage} />
+        <Stack.Screen name="AccountCreat" component={AccountCreat} />
+        <Stack.Screen name="DashBoard" component={DashBoard} />
+        <Stack.Screen name="AddCarDetails" component={AddCarDetails} />
+
+      </Stack.Navigator>
+    </NavigationContainer>
+
   )
-  }
+}

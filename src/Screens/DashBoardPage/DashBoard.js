@@ -8,7 +8,7 @@ import { TextInput } from 'react-native-gesture-handler'
 
 
 
-export default function DashBoard() {
+export default function DashBoard({ navigation }) {
     return (
 
         <SafeAreaView style={style.container}>
@@ -50,7 +50,7 @@ export default function DashBoard() {
                         </TouchableOpacity>
 
 
-                        <TouchableOpacity style={style.scrollViewView2}>
+                        <TouchableOpacity style={style.scrollViewView2} onPress={() => { navigation.navigate("AddCarDetails") }}>
                             <Icon name="plus" color="white" size={32} />
                             <Text>Add</Text>
                         </TouchableOpacity>
